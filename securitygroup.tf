@@ -1,7 +1,7 @@
 resource "aws_security_group" "morays_app_sg" {
   name        = "morays-app-sg"
   description = "Security group for Morays application"
-  vpc_id      = "vpc-0ea9b12ce1c86f529"
+  vpc_id      = var.vpc_id
 }
 
 resource "aws_security_group_rule" "ssh_rule" {
