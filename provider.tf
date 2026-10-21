@@ -6,6 +6,11 @@ terraform {
       version = "~>6.0"
     }
   }
+  backend "s3" {
+    bucket         = "morays-terraform-state"
+    key            = "morays-ec2/terraform.tfstate"
+    region         = "eu-west-2"
+  }
 }
 
 provider "aws" {
